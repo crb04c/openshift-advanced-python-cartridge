@@ -112,10 +112,10 @@ function tidy() {
 function build_server() {
     case "$OPENSHIFT_PYTHON_SERVER" in
         gevent)
-            pip install gevent
+            pip install gevent gevent-socketio
             ;;
         gunicorn)
-            pip install gevent gunicorn
+            pip install gevent gevent-socketio gunicorn
             ;;
     esac
 

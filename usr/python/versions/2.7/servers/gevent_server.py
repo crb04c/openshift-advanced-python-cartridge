@@ -10,4 +10,4 @@ sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
 sock.bind(sock_path)
 sock.listen(256)
 
-WSGIServer(sock, app.application).serve_forever()
+SocketIOServer(sock, app.application, resource="socket.io").serve_forever()
